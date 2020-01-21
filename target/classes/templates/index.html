@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Homepage - Dog Show</title>
+
+<link rel="stylesheet" type="text/css" href = "../static/css/style.css" th:href = "@{/css/style.css}">
+
+</head>
+<body>
+        <div class="topnav" style = "font-style: normal;">
+                <a class="active" href="/">Home</a>
+                <a href="/admin" th:href="@{/admin}" >Admin Login</a>
+                <a href="/member" th:href="@{/member}">Member Login</a>
+                <a href="/member" th:href="@{/register}">Register a member</a>
+              </div>
+    <div>
+         <img src="../static/img/headerDog.jpg" th:src="@{/img/headerDog.jpg}" alt = "headerDog" style="width: 100vw; height: 300px;">
+    </div>
+    <div class="plate">
+        <p class="script"><span>The</span></p>
+        <p class="shadow text1">SUMMER</p>
+        <p class="shadow text2">DOG</p>
+        <p class="shadow text3">SHOW</p>
+        <p class="script"><span>by Shehjad & Mohammad</span></p>
+      </div>
+</body>
+</html>

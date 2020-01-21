@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Summer Dog Fest Show Result</title>
+
+<link rel="stylesheet" type="text/css" media="all" 
+href="../static/css/my.css"
+th:href="@{/css/my.css}">
+<link rel="stylesheet" type="text/css" href = "../static/css/style.css" th:href = "@{/css/style.css}">
+</head>
+<body>
+
+ <div class="topnav" style = "font-style: normal;">
+                <a href="/">Home</a>
+                <a href="/admin" th:href="@{/admin}" >Admin Login</a>
+                <a href="/member" th:href="@{/member}">Member Login</a>
+                <a href="/register" th:href="@{/register}">Register a member</a>
+                <a href="/gen" th:href="@{/gen}">Generate Dog Records</a>
+                <a class="active" href="/view" th:href="@{/view}">View All Dogs</a>
+                <a class="active" href="/find" th:href="@{/find}">Search Dogs</a>
+                <a href="/schedule" th:href="@{/schedule}">Generate Schedule</a>
+                <a style = "float: right;" href="/ogout" th:href="@{/logout}">Logout</a>
+              </div>
+
+<div class="div1">
+
+
+<center><img src="../static/img/dog1.png" th:src="@{/img/dog1.png}" align="center"></center><br>
+<h1>Summer Dog Fest Show</h1>
+</div>
+
+<div>
+<table align="center" border="1">
+<tr>
+	<th>ID</th>
+	<th>Dog Name</th>
+	<th>Owner Name</th>
+	<th>Email Address</th>
+	<th>Breed</th>
+	<th>Group</th>
+	<th>Gender</th>
+	<th>Rank</th>
+	<th>Day</th>
+	<th>EDIT</th>
+	<th>DELETE</th>
+</tr>
+
+<tr th:each="dogx:${dogList}">
+	<td>[[${dogx.id}]]</td>
+	<td>[[${dogx.dog}]]</td>
+	<td>[[${dogx.owner}]]</td>
+	<td>[[${dogx.email}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.dogGroup}]]</td>
+	<td>[[${dogx.gender}]]</td>
+	<td>[[${dogx.dogRank}]]</td>
+	<td>[[${dogx.dayx}]]</td>
+	<td><a th:href="@{/edit/{id}(id=${dogx.id})}">EDIT</a></td>
+	<td><a th:href="@{/delete/{id}(id=${dogx.id})}">DELETE</a></td>
+	</tr>
+
+</table>
+</div>
+</body>
+</html>

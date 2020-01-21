@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dog Show Schedule</title>
+
+<link rel="stylesheet" type="text/css" media="all" 
+href="../static/css/my.css"
+th:href="@{/css/my.css}">
+<link rel="stylesheet" type="text/css" href = "../static/css/style.css" th:href = "@{/css/style.css}">
+</head>
+<body>
+
+ <div class="topnav" style = "font-style: normal;">
+                <a href="/">Home</a>
+                <a href="/admin" th:href="@{/admin}" >Admin Login</a>
+                <a href="/member" th:href="@{/member}">Member Login</a>
+                <a href="/member" th:href="@{/registerx}">Register a member</a>
+                <a href="/gen" th:href="@{/gen}">Generate Dog Records</a>
+                <a href="/view" th:href="@{/view}">View All Dogs</a>
+                <a href="/find" th:href="@{/find}">Search Dogs</a>
+                <a class="active" href="/schedule" th:href="@{/schedule}">Generate Schedule</a>
+                <a style = "float: right;" href="/ogout" th:href="@{/logout}">Logout</a>
+              </div>
+              
+<div class="div1">
+<center><img src="../static/img/dog1.png" th:src="@{/img/dog1.png}" align="center"></center><br>
+</div>
+
+<div>
+<h2 align="center" th:text="${day1}" style="background-color:blue"></h2>
+<h2 align="center">Judge for Group 1</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList1}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 2</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList2}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 3</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList3}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 4</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList4}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 5</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList5}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 6</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList6}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 7</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList7}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+</div>
+
+<div>
+<h2 align="center" th:text="${day2}" style="background-color:blue"></h2>
+<h2 align="center">Judge for Group 1</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList1a}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 2</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList2a}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 3</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList3a}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 4</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList4a}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 5</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList5a}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 6</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList6a}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 7</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList7a}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+</div>
+
+<div>
+<h2 align="center" th:text="${day3}" style="background-color:blue"></h2>
+<h2 align="center">Judge for Group 1</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList1b}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 2</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList2b}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 3</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList3b}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 4</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList4b}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 5</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList5b}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 6</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList6b}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+<br>
+<h2 align="center">Judge for Group 7</h2>
+<table align="center" border="1">
+<tr>
+	<th>Frequency</th>
+	<th>Breed Name</th>
+	<th>Male Class</th>
+	<th>Male Specialty</th>
+	<th>Female Class</th>
+	<th>Female Specialty</th>
+</tr>
+
+<tr th:each="dogx:${dogList7b}">
+	<td>[[${dogx.freq}]]</td>
+	<td>[[${dogx.breed}]]</td>
+	<td>[[${dogx.one}]]</td>
+	<td>[[${dogx.two}]]</td>
+	<td>[[${dogx.three}]]</td>
+	<td>[[${dogx.four}]]</td>
+	</tr>
+
+</table>
+</div>
+
+
+</body>
+</html>

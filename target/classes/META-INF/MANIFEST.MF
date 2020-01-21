@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: shoeb
+Build-Jdk: 12.0.1
+Implementation-Title: week10_security
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: ca.sheridancollege
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/week10_security
+Created-By: Maven Integration for Eclipse
+

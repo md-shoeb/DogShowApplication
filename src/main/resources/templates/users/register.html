@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thmeleaf.org/thmeleaf=extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">    
+<link rel="stylesheet" type="text/css" href = "../static/css/style.css" th:href = "@{/css/style.css}">
+</head>
+<body  style = "margin-top: 0px;">
+
+ <div class="topnav">
+                <a href="/">Home</a>
+                <a href="/admin" th:href="@{/admin}" >Admin Login</a>
+                <a href="/member" th:href="@{/member}">Member Login</a>
+                <a class="active" href="/member" th:href="@{/register}">Register a member</a>
+                <a href="/gen" th:href="@{/gen}">Generate Dog Records</a>
+                <a href="/view" th:href="@{/view}">View All Dogs</a>
+                <a href="/find" th:href="@{/find}">Search Dogs</a>
+                <a href="/schedule" th:href="@{/schedule}">Generate Schedule</a>
+                <a style = "float: right;" href="/ogout" th:href="@{/logout}">Logout</a>
+              </div>
+              
+<form action="#" th:action="@{/registerx}" method="post">
+<table>
+<tr>
+<td>Name: </td><td><input type = "text" name="username" required></td>
+</tr>
+<tr>
+<td>Password: </td><td><input type = "password" name="password" required></td>
+</tr>
+<tr>
+<td>Select Role: </td><td><select name="rolex">
+  <option value="ROLE_ADMIN">Admin</option>
+  <option value="ROLE_MEMBER">Member</option>
+</select></td>
+</tr>
+<tr><td><button class="btn btn-lg btn-primary btn-block" type="submit" name="addUser" id="login-submit" onclick="alertFunction();">Add User</button><br><br></td></tr>
+</table></form>
+<div id = "alert"></div>
+<script type = "text/javascript" defer>
+function alertFunction(){
+	 alert("User has been registered successfully!");
+}
+</script>
+</body>
+</html>

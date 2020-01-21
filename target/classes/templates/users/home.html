@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Summer Dog Fest Show</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+<link rel="stylesheet" type="text/css" media="all" 
+href="../static/css/my.css"
+th:href="@{/css/my.css}">
+<link rel="stylesheet" type="text/css" href = "../static/css/style.css" th:href = "@{/css/style.css}">
+</head>
+<body>
+
+ <div class="topnav" style = "font-style: normal;">
+                <a href="/">Home</a>
+                <a href="/admin" th:href="@{/admin}" >Admin Login</a>
+                <a href="/member" th:href="@{/member}">Member Login</a>
+                <a href="/register" th:href="@{/register}">Register a member</a>
+                <a href="/gen" th:href="@{/gen}">Generate Dog Records</a>
+                <a href="/view" th:href="@{/view}">View All Dogs</a>
+                <a href="/find" th:href="@{/find}">Search Dogs</a>
+                <a href="/schedule" th:href="@{/schedule}">Generate Schedule</a>
+                <a style = "float: right;" href="/ogout" th:href="@{/logout}">Logout</a>
+              </div>
+
+<div class="div1">
+<center><img src="../static/img/dog1.png" th:src="@{/img/dog1.png}" align="center"></center><br>
+</div>
+<div>
+<div style="float:left">
+<img src="../static/img/dog2.jpg" th:src="@{/img/dog2.jpg}" align="center" width="400" height="550">
+</div>
+<div style="float:clear">
+<form action="/add" method="get">
+<table align="center">
+<tr>
+<td>Dog Name: </td><td><input type = "text" name="dog" required></td>
+</tr>
+<tr>
+<td>Owner Name: </td><td><input type = "text" name="owner" required></td>
+</tr>
+<tr>
+<td>Email Address: </td><td><input type = "text" name="email" required></td>
+</tr>
+<tr>
+<td>Breed Name: </td><td><input type = "text" name="breed" required></td>
+</tr>
+<tr>
+<td></br>Select Your Group: </td>
+<td></br> <select name = "dogGroup">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+			   <option value = "5">five</option>
+			   <option value = "6">six</option>
+			   <option value = "7" selected>seven</option>
+             </select>
+</td></tr>
+
+<tr><td>
+Select Gender:
+</td></tr>
+<tr><td>
+<input type="radio" name="gender" value="male" checked="checked"> Male</td>
+<td><input type="radio" name="gender" value="female" > Female</td>
+</tr>
+
+<tr><td>
+Select Rank:
+</td></tr>
+<tr><td>
+<input type="radio" name="dogRank" value="class"> Class</td>
+<td><input type="radio" name="dogRank" value="specialty" checked="checked"> Specialty</td>
+</tr>
+
+<tr>
+<td></br>Select Show Day: </td>
+<td></br> <select name = "dayx">
+               <option value = "Friday">Friday</option>
+               <option value = "Saturday">Saturday</option>
+               <option value = "Sunday" selected>Sunday</option>
+             </select>
+</td></tr>
+
+<tr><td></br><button class="btn btn-lg btn-primary btn-block" type="submit" name="register" id="login-submit">Register</button><br><br></td>
+</tr></form>
+<tr><td></br>
+</td>      
+</tr>
+</table>
+<br>
+</div>
+
+<div>
+<h2>Dog Breed and Group Guidance For Auto Generated Dogs</h2>
+<h3 align="center">You can enter any new breed in any group but then don't enter same breed in 2 different groups please</h3>
+<h4 align="center">Thank You</h4>
+<table border="1" align="center">
+<tr>
+<th>Breed Name</th>
+<th>Group Number</th>
+</tr>
+
+<tr>
+<td>American_Bulldog, Alaskan_Malamute, Akbash</td>
+<td>Group 1</td>
+</tr>
+<tr>
+<td>American_Foxhound, Australin_Shepherd, Basenji</td>
+<td>Group 2</td>
+</tr>
+<tr>
+<td>Boxer, Canadian_Eskimo_Dog, Dalmatian</td>
+<td>Group 3</td>
+</tr>
+<tr>
+<td>English_Bulldog, English_Foxhound, French_Spaniel</td>
+<td>Group 4</td>
+</tr>
+<tr>
+<td>German_Shepherd, Icelandic_Sheepdog, Himalayan_Sheepdog</td>
+<td>Group 5</td>
+</tr>
+<tr>
+<td>Manchester_Terrier, Pembrok_Welsh_Corgi, Rafeiro_do_Alentejo</td>
+<td>Group 6</td>
+</tr>
+<tr>
+<td>Portuguese_Podengo, Saint_Bernard, Xiasi_Dog</td>
+<td>Group 7</td>
+</tr>
+</table>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.div1{
+	background-color:black;
+	height:400;
+	opacity:0.8;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: orange;
+}
+
+h1{
+	text-align:center;
+	color:pink;
+}
+h2{
+	text-align:center;
+	color:red;
+}
+
+h3{
+	text-align:center;
+}
+
+h4{
+	text-align:center;
+}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	color: blue;
+	font-size:25px;
+	font-style:italic;
+	background-color:pink;
+}
+
+form{
+	border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password]{
+	
+}
+
+input[type=submit]{
+	background-color: black;
+	color: pink;
+	height:50px;
+	width:250px;
+	font-size:25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style:italic;
+}
+
+input[type=submit]:hover{
+	opacity:0.8;
+}
